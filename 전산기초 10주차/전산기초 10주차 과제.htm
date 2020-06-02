@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10주차 실습과제</title>
+    <style>
+        h1 {
+            font-family: 굴림체;
+            font-style: italic;
+            color: red;
+            background-color:hotpink;
+            width: 600px;
+            height: 50px;
+            border: 10px;
+            border-style: ridge;
+            border-color: mediumseagreen;
+            box-shadow: 10px 10px 10px green;
+            text-align: center;
+            padding: 35px 20px 20px 20px;
+            margin: 20px 25%;
+            z-index: 2;
+            position: absolute;
+        }
+
+        body {
+            background: url(별.jpg) repeat-x fixed 10%;
+            background-color:mediumpurple;
+            background-size: 10% 15%;
+            background-position: bottom;
+            margin: 10px 10px 50px 50px;
+        }
+
+        ul li {
+            list-style-image: url(별.jpg);         
+            color: lavender;
+            font-size: 15pt;
+            list-style-position: inside;
+        }
+
+        ul li ul li {
+            list-style-image: url(별2.jpg);
+            font-size: 12pt;
+            color: lavender;
+            
+        }
+
+        .box {
+            background-color: skyblue;
+            width: 1250px;
+            height: 550px;
+            position: absolute;
+            z-index: 1;
+            margin: 100px 20px;
+            padding: 30px 30px;
+        }
+        
+        .border {
+            border: 50px solid ;
+            border-image: url(별.jpg) 10 repeat;
+            width: 300px;
+            height: 200px;
+            float: right;
+            margin: -350px 300px;
+            padding: 20;
+            background-color: blueviolet;
+        }
+        .ft {
+            font-size: 20pt;
+            color:navy;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>전산기초실습 실습과제</h1>
+    <div class=box>
+        <br><br>
+        <ul>
+            <li><b> 스타일 속성 <br><br>
+                    <ul>
+                        <li>폰트 속성<br><br>
+                        <li>텍스트 속성<br><br>
+                        <li>색과 배경 속성<br><br>
+                        <li>위치 속성<br><br>
+                        <li>목록 속성<br><br>
+                        <li>테두리 속성<br><br>
+                        <li>여백 속성<br><br>
+                        <li>그림자 속성<br><br>
+                    </ul></b>
+        </ul>
+        <div class="border ft"> <br><br>학번:20203202 <br><br> 이름:최준혁</div>
+    </div>
+</body>
+
+</html>
