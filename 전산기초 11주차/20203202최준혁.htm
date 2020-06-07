@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+    body {margin:0; background-color:#000000;}
+    #layer1 {position:absolute;left:10%;top:10%;
+    height:60%;width:65%;z-index:1;
+    background-color:#0F6107}
+
+    #layer2 {position:absolute;left:20%;top:20%;
+    height:60%;width:65%;z-index:2;
+    background-color:#F7DE0C;visibility:hidden}
+
+    #layer3 {position:absolute;left:30%;top:30%;
+    height:55%;width:65%;z-index:3;
+    background-color:#00f7ff;visibility:hidden}
+
+    #layer4 {margin: 1% 5% ;float:left;height:60%;width:40%;z-index:4;
+    background-color:#90cc35}
+
+    #layer5 {margin: 1% 5% ;float:right;height:60%;width:40%;z-index:4;
+    background-color:#90cc35}
+    .A {color:#040659; font-size: 30px;}
+    .B {color:#22741C; font-size: 30px;}
+    .C {color:#FFE400; font-size: 55px;}
+    .D {color:#000081; font-size: 60px;font-family: 맑은고딕}
+    </style>
+    <center>
+        <div id=layer1 OnMouseDown="layer2.style.visibility='visible'" OnMouseOver="layer2.style.visibility='hidden'">
+            <div class=C>전산기초실습 실습과제</div><br><br>
+            <div class=A>이 레이어를 클릭하면 다음 레이어가 나타납니다.</div>
+        </div>
+        <div id=layer2 OnMouseDown="layer3.style.visibility='visible'">
+            <div class=D>학번: 20203202 이름: 최 준 혁
+            </div><br><br>
+            <div class=B>이 레이어를 클릭하면 다음 레이어가 나타납니다.<br><br>초록 레이어에 마우스 포인터를 올리면 이 레이어가 사라집니다.</div>
+        </div>
+        <div id=layer3 OnMouseDown="layer3.style.visibility='hidden'">
+            <div class=A><br>이 레이어를 숨기고 싶다면 이 레이어를 클릭하세요!</div>
+            <div id=layer4>
+                <div class=A><br><b>왼쪽 레이어 입니다.<br><br>float 속성을 사용하여 왼쪽에<br> 배치하세요.</b></div>
+            </div>
+            <div id=layer5>
+                <div class=A><br><b>오른쪽 레이어 입니다.<br><br>float 속성을 사용하여 오른쪽에<br> 배치하세요.</b></div>
+            </div>
+        </div>
+</body>
+
+</html>
