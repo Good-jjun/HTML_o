@@ -1,0 +1,249 @@
+﻿<html>
+
+<head>
+	<title>14주차 실습과제</title>
+	<style>
+		body {
+			margin: 0;
+			background: url("../../../../작업%20파일/최준혁/14주차%20실습과제%201/피자사진.png") repeat-y;
+			background-position: right;
+			z-index: 1;
+			background-size: 10%;
+		}
+
+		header {
+			height: 15%;
+			padding: 20;
+			margin: 0;
+			background-color: hotpink;
+		}
+
+		nav {
+			height: 70%;
+			width: 30%;
+			padding: 20;
+			margin: 0;
+			background-color: tan;
+			float: left;
+			z-index: 1
+		}
+
+		article {
+			width: 88%;
+			height: 70%;
+			;
+			padding: 20;
+			margin: 0;
+			background-color: gray;
+			z-index: 1
+		}
+
+		footer {
+			height: 10%;
+			padding: 20;
+			background-color: lightgreen;
+			clear: both
+		}
+
+		.content1 {
+			font-size: 50pt;
+			color: navy;
+			text-align: center;
+			text-shadow: 5 5 10 red;
+		}
+
+		.content2 {
+			font-size: 30pt;
+			color: blue;
+			text-align: center;
+			white-space: pre;
+		}
+
+		#layer1 {
+			position: absolute;
+			left: 5%;
+			top: 30%;
+			height: 50;
+			width: 350;
+			z-index: 2;
+			background-color: tan;
+			border: 10;
+			box-shadow: 8 8 green;
+			o;
+			border: 10 ridge red;
+		}
+
+		#layer2 {
+			position: absolute;
+			left: 5%;
+			top: 48%;
+			height: 50;
+			width: 350;
+			z-index: 2;
+			background-color: tan;
+			border: 10;
+			box-shadow: 8 8 green;
+			o;
+			border: 10 ridge red;
+		}
+
+		#layer3 {
+			position: absolute;
+			left: 35%;
+			top: 30%;
+			height: 150;
+			width: 700;
+			z-index: 3;
+			background-color: yellow;
+			visibility: hidden
+		}
+
+		#layer4 {
+			position: absolute;
+			left: 20%;
+			top: 30%;
+			height: 500;
+			width: 1100;
+			background-color: skyblue;
+			padding: 80 0;
+			visibility: hidden
+		}
+
+		img {
+			border: 10 double red;
+			height: 400;
+			width: 500;
+			float: right;
+			margin: 80 60 0 60
+		}
+
+		hr {
+			margin: 80 0 0 60;
+		}
+
+		.hr2 {
+			margin: 10 0 0 60;
+			width: 460;
+			float: left
+		}
+
+		font {
+			margin: 80 0 0 60;
+			font-size: 15pt
+		}
+
+		.size {
+			margin: 0 0 0 0;
+			font-size: 15pt
+		}
+
+		fieldset {
+			margin: 0 0 0 60;
+			border: 5 solid blue;
+			font-size: 15pt
+		}
+
+		.content3 {
+			font-size: 40;
+			color: green;
+			text-align: center;
+			padding: 10 20;
+		}
+
+		.content4 {
+			font-size: 40;
+			color: navy;
+			text-align: center;
+			padding: 50 0 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="content1">전산기초실습 실습과제</div>
+	</header>
+	<nav>
+		<div id=layer1 class="content3" OnMouseDown="layer3.style.visibility='visible'">당신의 나이는?</div>
+		<div id=layer2 class="content3" OnMouseDown="layer4.style.visibility='visible'">피자 주문하기</div>
+	</nav>
+	<article>
+		<div id=layer3 class="content4">
+			<script>
+				x = prompt("태어난 년도를 입력하여 주세요!", "2001");
+				y = 2020 - x + 1;
+				document.write("당신의 나이는" + y + "세 입니다.");
+			</script>
+			<div>
+				<div id=layer4><img src="../../../../작업%20파일/최준혁/14주차%20실습과제%201/피자사진.png">
+					<hr color=red><br>
+					<font>주문자:<input type=text size=50><br></font>
+					<font>연락처:<input type=text size=50><br></font>
+					<br>
+					<fieldset align=left>
+						<legend>피자크기</legend>
+						<input type=radio>
+						<font class=size>Small</font>
+						<input type=radio>
+						<font class=size>Medium</font>
+						<input type=radio>
+						<font class=size>Large</font>
+						<input type=radio>
+						<font class=size>Family</font>
+					</fieldset><br>
+					<fieldset align=left>
+						<legend>피자토핑</legend>
+						<input type=checkbox>
+						<font class=size>불고기</font>
+						<input type=checkbox>
+						<font class=size>새우</font>
+						<input type=checkbox>
+						<font class=size>버섯</font>
+						<input type=checkbox>
+						<font class=size>양파</font>
+						<input type=checkbox>
+						<font class=size>치즈</font>
+					</fieldset>
+					<font>배달 시간:</font>
+					<select>
+						<option>오전
+						<option>오후
+					</select>
+					<select>
+						<option>1
+						<option>2
+						<option>3
+						<option>4
+						<option>5
+						<option>6
+						<option>7
+						<option>8
+						<option>9
+						<option>10
+						<option>11
+						<option>12
+					</select>
+					<select>
+						<option>10분
+						<option>20분
+						<option>30분
+						<option>40분
+						<option>50분
+						<option>60분
+					</select><input type=button value=주문완료>
+					<br>
+					<hr class=hr2 color=red>
+				</div>
+	</article>
+	<footer>
+		<div class="content2">학번:20203202 이름:최준혁</div>
+	</footer>
+
+
+
+
+
+
+</body>
+
+</html>
